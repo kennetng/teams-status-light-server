@@ -4,7 +4,7 @@ import { getPresence } from '../client/presenceClient';
 import { getToken } from './authApi';
 
 export function presenceApi(app: express.Application){
-    app.get("/presence/me", async (req, res) => {
+    app.get("/me/presence", async (req, res) => {
         const token = getToken();
         try{
             if(!token){
